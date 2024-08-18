@@ -36,10 +36,13 @@ To install the logger package, use `go get`:
 ```bash
 go get -u github.com/Azizbek-Qodirov/logger
 ```
+# Go Logger Package
 
 ## Quick Start
 
-Here's a simple example to get you started:
+Here are two simple examples to get you started:
+
+### Logging to Both File and Terminal
 
 ```go
 package main
@@ -68,6 +71,34 @@ func main() {
     log.TRACE.Println("This is a trace message")
 }
 ```
+
+### Logging Only to Terminal
+
+If you don't want to log to a file and only want to output logs to the terminal, you can pass `nil` as the configuration:
+
+```go
+package main
+
+import (
+    "github.com/Azizbek-Qodirov/logger"
+)
+
+func main() {
+    log, err := logger.NewLogger(nil)
+    if err != nil {
+        panic(err)
+    }
+
+    log.INFO.Println("Application started")
+    log.DEBUG.Println("This is a debug message")
+    log.WARN.Println("This is a warning message")
+    log.ERROR.Println("This is an error message")
+    log.TRACE.Println("This is a trace message")
+}
+```
+
+In this case, the logger will only output to the terminal and won't create any log files.
+
 
 ## Configuration
 
