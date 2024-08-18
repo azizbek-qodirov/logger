@@ -18,7 +18,6 @@ const (
 	Loglevel
 	ShortFileName
 	LongFileName
-	LogMessage
 )
 
 type LogFileConfigs struct {
