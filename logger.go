@@ -102,7 +102,7 @@ func generatePrefix(syntax logSyntax, level string) string {
 			if syntax&ShortFileName != 0 {
 				file = filepath.Base(file)
 			}
-			prefix += fmt.Sprintf("%s:%d", file, line)
+			prefix += fmt.Sprintf("%s:%d ", file, line)
 		}
 	}
 
