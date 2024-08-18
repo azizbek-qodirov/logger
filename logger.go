@@ -68,11 +68,11 @@ func NewLogger(config *LogFileConfigs) (*Logger, error) {
 			multiWriter = io.MultiWriter(file)
 		}
 
-		l.INFO = log.New(multiWriter, generatePrefix(config.Include, "INFO")+" ", 0)
-		l.WARN = log.New(multiWriter, generatePrefix(config.Include, "WARN")+" ", 0)
-		l.ERROR = log.New(multiWriter, generatePrefix(config.Include, "ERROR")+" ", 0)
-		l.DEBUG = log.New(multiWriter, generatePrefix(config.Include, "DEBUG")+" ", 0)
-		l.TRACE = log.New(multiWriter, generatePrefix(config.Include, "TRACE")+" ", 0)
+		l.INFO = log.New(multiWriter, generatePrefix(config.Include, "INFO"), 0)
+		l.WARN = log.New(multiWriter, generatePrefix(config.Include, "WARN"), 0)
+		l.ERROR = log.New(multiWriter, generatePrefix(config.Include, "ERROR"), 0)
+		l.DEBUG = log.New(multiWriter, generatePrefix(config.Include, "DEBUG"), 0)
+		l.TRACE = log.New(multiWriter, generatePrefix(config.Include, "TRACE"), 0)
 	} else {
 		flag := log.Lmsgprefix | log.LstdFlags | log.Lshortfile
 		l.INFO = log.New(multiWriter, "INFO ", flag)
@@ -102,7 +102,7 @@ func generatePrefix(syntax logSyntax, level string) string {
 			if syntax&ShortFileName != 0 {
 				file = filepath.Base(file)
 			}
-			prefix += fmt.Sprintf("%s:%d ", file, line)
+			prefix += fmt.Sprintf("%s:%d", file, line)
 		}
 	}
 
