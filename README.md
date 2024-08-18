@@ -126,7 +126,6 @@ const (
     Loglevel
     ShortFileName
     LongFileName
-    LogMessage
 )
 ```
 
@@ -187,7 +186,7 @@ config := &logger.LogFileConfigs{
     Directory: "logs",
     Filename:  "app.log",
     Stdout:    true,
-    Include:   logger.DateTime | logger.Loglevel | logger.ShortFileName | logger.LogMessage,
+    Include:   logger.DateTime | logger.Loglevel | logger.ShortFileName,
 }
 
 log, err := logger.NewLogger(config)
