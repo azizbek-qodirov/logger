@@ -51,7 +51,7 @@ type Logger struct {
 // It creates log files, sets up multi-writer for simultaneous stdout/file logging,
 // and assigns loggers for various levels.
 // Returns the initialized Logger and an error if any issues are encountered during setup.
-func NewLogger(config LogFileConfigs) (Logger, error) {
+func NewLogger(config *LogFileConfigs) (*Logger, error) {
 	l := &Logger{}
 
 	// Get the current working directory to construct the log file path.
