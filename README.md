@@ -48,7 +48,7 @@ Here are two simple examples to get you started:
 package main
 
 import (
-    "github.com/Azizbek-Qodirov/logger"
+    "github.com/azizbek-qodirov/logger"
 )
 
 func main() {
