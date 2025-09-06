@@ -1,7 +1,7 @@
 # Go Logger Package
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/Azizbek-Qodirov/logger.svg)](https://pkg.go.dev/github.com/Azizbek-Qodirov/logger)
-[![Go Report Card](https://goreportcard.com/badge/github.com/Azizbek-Qodirov/logger)](https://goreportcard.com/report/github.com/Azizbek-Qodirov/logger)
+[![Go Reference](https://pkg.go.dev/badge/github.com/azizbek-qodirov/logger.svg)](https://pkg.go.dev/github.com/azizbek-qodirov/logger)
+[![Go Report Card](https://goreportcard.com/badge/github.com/azizbek-qodirov/logger)](https://goreportcard.com/report/github.com/azizbek-qodirov/logger)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 A flexible and easy-to-use logging package for Go applications. This logger provides customizable log levels, output formats, and destinations, making it suitable for a wide range of Go projects.
@@ -34,7 +34,7 @@ A flexible and easy-to-use logging package for Go applications. This logger prov
 To install the logger package, use `go get`:
 
 ```bash
-go get -u github.com/Azizbek-Qodirov/logger
+go get -u github.com/azizbek-qodirov/logger
 ```
 # Go Logger Package
 
@@ -80,7 +80,7 @@ If you don't want to log to a file and only want to output logs to the terminal,
 package main
 
 import (
-    "github.com/Azizbek-Qodirov/logger"
+    "github.com/azizbek-qodirov/logger"
 )
 
 func main() {
